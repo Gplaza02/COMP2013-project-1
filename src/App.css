@@ -1,3 +1,9 @@
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
 #root {
   width: 100%;
   max-width: 1200px;
@@ -5,6 +11,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #1a1a1a;
 }
 
 .NavBar {
@@ -12,9 +19,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px 20px;
   border-radius: 8px;
   height: 100%;
+  margin-bottom: 20px;
 }
 
 .NavDiv {
@@ -25,6 +33,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.NavTitle h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
 .NavCart {
@@ -41,57 +54,249 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-
-  /* max-width: 800px; */
-  /* border: 1px solid white; */
+  gap: 20px;
 }
 
 .CartContainer {
-  width: 25%;
-  justify-content: center;
+  width: 30%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
 
-  /* position: sticky; */
-  /* top: 0; Adjust this value as needed */
-  /* max-height: 100vh; Ensure it doesn't exceed the viewport height */
-  /* overflow-y: auto; Add scroll if content exceeds the container height */
+.CartHeader {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
 
-  /* border: 1px solid white; */
+.CartHeader strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.CartEmpty {
+  padding: 20px;
+  color: #aaa;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.CartList {
+  margin-bottom: 15px;
 }
 
 .CartCard {
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
-  border: 2px wheat solid;
+  border: 2px solid #444;
   border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
-  background-color: rgb(43, 48, 54);
+  margin: 0 0 15px 0;
+  padding: 15px;
+  background-color: #2a2a2a;
 }
 
-.CartCardInfo {
-  /* display: flex;
-  justify-content: space-around; */
-  width: 50%;
+.CartImageDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.ProductsContainer {
-  width: 75%;
-  max-width: 800px;
+.CartImageDiv img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.CartInfoDiv {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.CartInfoDiv h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.CartInfoDiv p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.CartQuantityDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.CartQuantityDiv button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.CartQuantityDiv button:hover {
+  background-color: #ddd;
+}
+
+.CartQuantityDiv p {
+  min-width: 30px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  color: white;
+}
+
+.CartRemoveDiv {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.CartRemoveDiv button {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.CartRemoveDiv button:hover {
+  background-color: #ddd;
+}
+
+.ProductsContainer,
+.ProductCardsContainer {
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  /* border: 1px solid white; */
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 15px;
 }
 
 .ProductCard {
-  width: 20%;
-  border: 2px wheat solid;
+  width: calc(25% - 12px);
+  min-width: 140px;
+  border: 2px solid #444;
   border-radius: 10px;
-  margin: 10px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.ProductCard img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.ProductCard h3,
+.ProductCard h4 {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.ProductCard div {
+  font-size: 12px;
+  margin: 3px 0;
+  color: #aaa;
+  text-align: center;
+}
+
+.ProductCard input[type="number"] {
+  width: 100%;
   padding: 5px;
+  margin: 5px 0;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+
+.ProductCard button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: 1px solid #444;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.ProductCard button:hover {
+  background-color: rgb(76, 43, 226);
+  border-color: rgb(76, 43, 226);
+}
+
+.QuantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.QuantityControls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+}
+
+.QuantityControls button:hover {
+  background-color: rgb(76, 43, 226);
+}
+
+.QuantityControls span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .ProductQuantityDiv {
@@ -106,11 +311,14 @@
   align-items: center;
   width: 25px;
   height: 25px;
-  border: 1px solid white;
+  border: 1px solid #444;
   border-radius: 50%;
   cursor: pointer;
   margin: 0 5px;
+  background-color: black;
+  color: white;
 }
+
 .QuantityBtn:hover {
   background-color: rgb(76, 43, 226);
 }
@@ -121,33 +329,79 @@ img {
 }
 
 .counter-container {
-  /* border: 1px solid white; */
   display: flex;
-  width: 70%;
-  height: 20px;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  margin: 5px auto;
+  margin: 10px 0;
+  gap: 10px;
 }
 
 .counter-button {
-  width: 15px;
-  height: 15px;
-  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.CartListBtns {
+  background-color: black;
+  color: white;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
 }
 
-.RemoveButton {
+.counter-button:hover {
+  background-color: rgb(76, 43, 226);
+}
+
+.counter-container span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.CartListBtns,
+.CartActions,
+.CartButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.CartListBtns button,
+.CartActions button,
+.CartButtons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.RemoveButton,
+.EmptyCartButton {
   background-color: rgb(190, 0, 0);
+}
+
+.RemoveButton:hover,
+.EmptyCartButton:hover {
+  background-color: rgb(210, 20, 20);
 }
 
 #BuyButton {
   background-color: green;
-  width: 50%;
+}
+
+#BuyButton:hover {
+  background-color: rgb(0, 180, 0);
+}
+
+.CartCard button {
+  width: 100%;
+  margin-top: 10px;
 }
